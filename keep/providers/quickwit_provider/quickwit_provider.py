@@ -73,14 +73,14 @@ class QuickwitProvider(BaseProvider, ProviderHealthMixin):
             **self.config.authentication
         )
 
-    def validate_scopes(self) -> dict[str, bool | str]:
-        url = f"{self.authentication_config.host_url}/api/v1".rstrip("/")
-        try:
-            response = requests.get(url, verify=self.authentication_config.verify)
-            response.raise_for_status()
-            return {"connectivity": True}
-        except Exception as e:
-            return {"connectivity": str(e)}
+    # def validate_scopes(self) -> dict[str, bool | str]:
+    #     url = f"{self.authentication_config.host_url}/api/v1".rstrip("/")
+    #     try:
+    #         response = requests.get(url, verify=self.authentication_config.verify)
+    #         response.raise_for_status()
+    #         return {"connectivity": True}
+    #     except Exception as e:
+    #         return {"connectivity": str(e)}
 
     def _build_auth(self):
         if self.authentication_config.username and self.authentication_config.password:
