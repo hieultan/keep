@@ -1,0 +1,20 @@
+workflow:
+  id: quickwit-basic-query
+  name: Quickwit Basic Query
+  description: Perform a simple Quickwit search
+  triggers:
+    - type: manual
+  steps:
+    - name: search-errors
+      provider:
+        type: quickwit
+        config: "{{ providers.quickwit }}"
+        with:
+          index_id: my-index
+          query: "status:500"
+  actions:
+    - name: print-results
+      provider:
+        type: console
+        with:
+          message: "{{ steps.search-errors.results }}"
