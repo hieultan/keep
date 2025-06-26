@@ -73,7 +73,9 @@ class QuickwitProvider(BaseProvider, ProviderHealthMixin):
             **self.config.authentication
         )
 
-    # def validate_scopes(self) -> dict[str, bool | str]:
+        """Validate that the Quickwit server is reachable."""
+
+        url = self.authentication_config.host_url.rstrip("/")
     #     url = f"{self.authentication_config.host_url}/api/v1".rstrip("/")
     #     try:
     #         response = requests.get(url, verify=self.authentication_config.verify)
