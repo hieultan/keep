@@ -762,6 +762,12 @@
         </a>
     </td>
     <td align="center" width="150">
+        <a href="https://docs.keephq.dev/providers/documentation/quickwit-provider" target="_blank">
+            <img width="40" src="https://img.logo.dev/quickwit.io?token=pk_dfXfZBoKQMGDTIgqu7LvYg" alt="Quickwit"/><br/>
+            Quickwit
+        </a>
+    </td>
+    <td align="center" width="150">
         <a href="https://docs.keephq.dev/providers/documentation/ssh-provider" target="_blank">
             <img width="40" src="keep-ui/public/icons/ssh-icon.png" alt="SSH"/><br/>
             SSH

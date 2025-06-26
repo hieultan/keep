@@ -1,0 +1,29 @@
+{/* This snippet is automatically generated using scripts/docs_render_provider_snippets.py
+Do not edit it manually, as it will be overwritten */}
+
+## Authentication
+This provider requires authentication.
+- **host_url**: Quickwit host URL (required: True, sensitive: False)
+- **verify**: Verify SSL certificates (required: False, sensitive: False)
+- **username**: Username for basic auth (required: False, sensitive: False)
+- **password**: Password for basic auth (required: False, sensitive: True)
+- **token**: Bearer token (required: False, sensitive: True)
+
+Certain scopes may be required to perform specific actions or queries via the provider. Below is a summary of relevant scopes and their use cases:
+- **connectivity**: Connectivity Test (mandatory)
+
+## In workflows
+
+This provider can be used in workflows.
+
+As "step" to query data, example:
+```yaml
+steps:
+    - name: Query quickwit
+      provider: quickwit
+      config: "{{ provider.my_provider_name }}"
+      with:
+        index_id: {value}
+        query: {value}
+```
+
