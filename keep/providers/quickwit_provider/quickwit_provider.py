@@ -75,14 +75,13 @@ class QuickwitProvider(BaseProvider, ProviderHealthMixin):
 
         """Validate that the Quickwit server is reachable."""
 
-        url = self.authentication_config.host_url.rstrip("/")
-    #     url = f"{self.authentication_config.host_url}/api/v1".rstrip("/")
-    #     try:
-    #         response = requests.get(url, verify=self.authentication_config.verify)
-    #         response.raise_for_status()
-    #         return {"connectivity": True}
-    #     except Exception as e:
-    #         return {"connectivity": str(e)}
+        url = f"{self.authentication_config.host_url}/api/v1/version".rstrip("/")
+        try:
+            response = requests.get(url, verify=self.authentication_config.verify)
+            response.raise_for_status()
+            return {"connectivity": True}
+        except Exception as e:
+            return {"connectivity": str(e)}
 
     def _build_auth(self):
         if self.authentication_config.username and self.authentication_config.password:
