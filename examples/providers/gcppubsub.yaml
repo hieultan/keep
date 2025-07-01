@@ -1,0 +1,7 @@
+name: gcppubsub
+type: gcppubsub
+authentication:
+  # Optional service account JSON contents
+  # service_account_json: '{"project_id": "my-project", ...}'
+  # Full resource path to the subscription
+  subscription: "projects/<project-id>/subscriptions/<subscription-name>"

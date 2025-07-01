@@ -1,0 +1,12 @@
+{/* This snippet is automatically generated using scripts/docs_render_provider_snippets.py
+Do not edit it manually, as it will be overwritten */}
+## Authentication
+This provider requires authentication.
+- **service_account_json**: The service account JSON with subscriber role (required: False, sensitive: True)
+- **subscription**: Full Pub/Sub subscription path (required: True, sensitive: False)
+
+Certain scopes may be required to perform specific actions or queries via the provider. Below is a summary of relevant scopes and their use cases:
+- **roles/pubsub.subscriber**: Read access to Pub/Sub subscription (mandatory)
+
+## In workflows
+This provider can't be used as a "step" or "action" in workflows. If you want to use it, please raise a [GitHub issue](https://github.com/keephq/keep/issues).
