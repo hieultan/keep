@@ -9,8 +9,9 @@ from google.cloud import pubsub_v1
 
 from keep.contextmanager.contextmanager import ContextManager
 from keep.providers.base.base_provider import BaseProvider
-from keep.providers.gcpmonitoring_provider.gcpmonitoring_provider import \
-    GcpmonitoringProvider
+from keep.providers.gcpmonitoring_provider.gcpmonitoring_provider import (
+    GcpmonitoringProvider,
+)
 from keep.providers.models.provider_config import ProviderConfig, ProviderScope
 from keep.providers.providers_factory import ProvidersFactory
 
