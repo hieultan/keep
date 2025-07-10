@@ -1,0 +1,5 @@
+name: gcppubsub
+type: gcppubsub
+authentication:
+  subscription: projects/my-project/subscriptions/my-subscription
+  # service_account_json: "$(SERVICE_ACCOUNT_JSON)"
