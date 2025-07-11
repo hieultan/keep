@@ -20,22 +20,22 @@ from keep.providers.gcpmonitoring_provider.gcpmonitoring_provider import (
 
 @pydantic.dataclasses.dataclass
 class GcppubsubProviderAuthConfig:
-    project_id: str = dataclasses.field(
-        metadata={"required": True, "description": "GCP project ID"}
-    )
-    subscription: str = dataclasses.field(
-        metadata={"required": True, "description": "PubSub subscription name"}
-    )
     service_account_json: Optional[str] = dataclasses.field(
         default=None,
         metadata={
             "required": False,
-            "description": "Service account JSON with pubsub subscriber role",
+            "description": "Service account JSON with permissions to read the subscription",
             "sensitive": True,
             "type": "file",
             "name": "service_account_json",
             "file_type": "application/json",
         },
+    )
+    subscription: str = dataclasses.field(
+        metadata={
+            "required": True,
+            "description": "Pub/Sub subscription path (projects/<project>/subscriptions/<name>)",
+        }
     )
 
 
