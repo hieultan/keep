@@ -183,6 +183,7 @@
             "providers/documentation/gitlabpipelines-provider",
             "providers/documentation/gke-provider",
             "providers/documentation/google_chat-provider",
+            "providers/documentation/googlepubsub-provider",
             "providers/documentation/grafana-provider",
             "providers/documentation/grafana_incident-provider",
             "providers/documentation/grafana_loki-provider",

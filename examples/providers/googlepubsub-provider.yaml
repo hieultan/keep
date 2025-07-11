@@ -1,0 +1,8 @@
+name: googlepubsub-example
+type: googlepubsub
+authentication:
+  subscription: "projects/YOUR_PROJECT/subscriptions/YOUR_SUBSCRIPTION"
+  # optional topic for publishing messages
+  topic: "projects/YOUR_PROJECT/topics/YOUR_TOPIC"
+  service_account_json: "$(GOOGLE_PUBSUB_SERVICE_ACCOUNT_JSON)"
+  project_id: YOUR_PROJECT
