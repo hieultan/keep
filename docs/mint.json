@@ -176,6 +176,7 @@
             "providers/documentation/flashduty-provider",
             "providers/documentation/fluxcd-provider",
             "providers/documentation/gcpmonitoring-provider",
+            "providers/documentation/gcppubsub-provider",
             "providers/documentation/gemini-provider",
             "providers/documentation/github-provider",
             "providers/documentation/github_workflows_provider",
